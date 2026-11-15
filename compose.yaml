@@ -1,0 +1,25 @@
+services:
+  vulris:
+    build:
+      context: .
+    image: vulris:local
+    entrypoint:
+      - vulris
+      - --data-dir
+      - /data
+      - --project
+      - /source
+    command: ["--help"]
+    volumes:
+      - type: bind
+        source: ${VULRIS_PROJECT:-./tests/fixture}
+        target: /source
+        read_only: true
+      - type: volume
+        source: vulris-data
+        target: /data
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  vulris-data:

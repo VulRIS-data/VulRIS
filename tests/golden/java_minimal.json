@@ -1,0 +1,240 @@
+{
+  "calls": [
+    {
+      "arguments": [
+        "id"
+      ],
+      "caller_id": "fef88aa808be795c84bc56ab",
+      "column": 15,
+      "end_line": 9,
+      "expression": "service.find(id)",
+      "id": "234f711fdf145ac597886bf3",
+      "kind": "method",
+      "name": "find",
+      "path": "Controller.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "receiver": "service",
+      "start_line": 9,
+      "status": "candidate",
+      "targets": [
+        "03671c67b36120394d354495"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "dst_id": "fef88aa808be795c84bc56ab",
+      "evidence": {
+        "path": "Controller.java",
+        "start_line": 7
+      },
+      "id": "2886d1b4d9b6ec89bbf03308",
+      "kind": "CONTAINS",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "src_id": "3ef87c80272ce8eb032a4022",
+      "status": "syntax"
+    },
+    {
+      "dst_id": "03671c67b36120394d354495",
+      "evidence": {
+        "path": "Service.java",
+        "start_line": 2
+      },
+      "id": "60cc8a961e363c2c9b0340e3",
+      "kind": "CONTAINS",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "src_id": "bf4f9ec1eb1154dec1c4cb09",
+      "status": "syntax"
+    },
+    {
+      "dst_id": "03671c67b36120394d354495",
+      "evidence": {
+        "call_id": "234f711fdf145ac597886bf3",
+        "path": "Controller.java",
+        "start_line": 9
+      },
+      "id": "6f9653f1050d2d830c7657a4",
+      "kind": "CALLS",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "src_id": "fef88aa808be795c84bc56ab",
+      "status": "candidate"
+    },
+    {
+      "dst_id": "924a17189e6769b19fee7b3d",
+      "evidence": {
+        "path": "Controller.java",
+        "start_line": 5
+      },
+      "id": "88a425bf953436d1a007a37b",
+      "kind": "CONTAINS",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "src_id": "3ef87c80272ce8eb032a4022",
+      "status": "syntax"
+    }
+  ],
+  "facts": [
+    {
+      "annotation": "@PathVariable",
+      "end_line": 10,
+      "id": "6732db627e0880e5f195bfd7",
+      "kind": "input",
+      "parameter": "id",
+      "path": "Controller.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "start_line": 7,
+      "status": "candidate",
+      "symbol_id": "fef88aa808be795c84bc56ab"
+    },
+    {
+      "annotation": "@GetMapping(\"/items/{id}\")",
+      "end_line": 10,
+      "http_method": "GET",
+      "id": "7dbc922b85c9f3ba83b341f3",
+      "kind": "route",
+      "note": "Annotation-name match; runtime mapping and profiles unverified",
+      "path": "Controller.java",
+      "path_resolution": "literal",
+      "paths": [
+        "/items/{id}"
+      ],
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "start_line": 7,
+      "status": "candidate",
+      "symbol_id": "fef88aa808be795c84bc56ab"
+    }
+  ],
+  "parse_errors": [],
+  "symbols": [
+    {
+      "annotations": [],
+      "bases": [],
+      "end_line": 4,
+      "id": "03671c67b36120394d354495",
+      "imports": [],
+      "kind": "method",
+      "locals": {},
+      "name": "find",
+      "owner_id": "bf4f9ec1eb1154dec1c4cb09",
+      "package": "",
+      "parameters": [
+        {
+          "annotations": [],
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "path": "Service.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "qualified_name": "Service.find",
+      "return_type": "String",
+      "signature": "String find(String id)",
+      "start_line": 2
+    },
+    {
+      "annotations": [],
+      "bases": [],
+      "end_line": 11,
+      "id": "3ef87c80272ce8eb032a4022",
+      "imports": [
+        "org.springframework.web.bind.annotation.GetMapping",
+        "org.springframework.web.bind.annotation.PathVariable"
+      ],
+      "kind": "class",
+      "locals": {},
+      "name": "Controller",
+      "owner_id": null,
+      "package": "",
+      "parameters": [],
+      "path": "Controller.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "qualified_name": "Controller",
+      "return_type": "",
+      "signature": "class Controller",
+      "start_line": 4
+    },
+    {
+      "annotations": [],
+      "end_line": 5,
+      "id": "924a17189e6769b19fee7b3d",
+      "kind": "field",
+      "name": "service",
+      "owner_id": "3ef87c80272ce8eb032a4022",
+      "path": "Controller.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "qualified_name": "Controller.service",
+      "signature": "private final Service service = new Service();",
+      "start_line": 5,
+      "type": "Service"
+    },
+    {
+      "annotations": [],
+      "bases": [],
+      "end_line": 5,
+      "id": "bf4f9ec1eb1154dec1c4cb09",
+      "imports": [],
+      "kind": "class",
+      "locals": {},
+      "name": "Service",
+      "owner_id": null,
+      "package": "",
+      "parameters": [],
+      "path": "Service.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "qualified_name": "Service",
+      "return_type": "",
+      "signature": "class Service",
+      "start_line": 1
+    },
+    {
+      "annotations": [
+        {
+          "line": 7,
+          "name": "GetMapping",
+          "text": "@GetMapping(\"/items/{id}\")",
+          "values": {
+            "value": {
+              "expression": "\"/items/{id}\"",
+              "literal": true,
+              "strings": [
+                "/items/{id}"
+              ]
+            }
+          }
+        }
+      ],
+      "bases": [],
+      "end_line": 10,
+      "id": "fef88aa808be795c84bc56ab",
+      "imports": [
+        "org.springframework.web.bind.annotation.GetMapping",
+        "org.springframework.web.bind.annotation.PathVariable"
+      ],
+      "kind": "method",
+      "locals": {},
+      "name": "item",
+      "owner_id": "3ef87c80272ce8eb032a4022",
+      "package": "",
+      "parameters": [
+        {
+          "annotations": [
+            {
+              "line": 8,
+              "name": "PathVariable",
+              "text": "@PathVariable",
+              "values": {}
+            }
+          ],
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "path": "Controller.java",
+      "provenance": "java-syntax-v3-ts0.25-java0.23",
+      "qualified_name": "Controller.item",
+      "return_type": "String",
+      "signature": "@GetMapping(\"/items/{id}\")\n    String item(@PathVariable String id)",
+      "start_line": 7
+    }
+  ],
+  "version": "java-syntax-v3-ts0.25-java0.23"
+}
